@@ -1,0 +1,20 @@
+fileVersion: 1
+id: "223"
+mappingDefinitions:
+  SOURCE_CUSTOM:
+    database: JUSTIN_SOURCE
+    schema: SOURCE_EDW
+  SOURCE_TASTYBYTES:
+    database: FROSTBYTE_TASTY_BYTES
+    schema: TASTY_BYTES
+  SOURCE_TASTYBYTES_ANALYTICS:
+    database: FROSTBYTE_TASTY_BYTES
+    schema: ANALYTICS
+  SOURCE_TPCH:
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+  TARGET:
+    database: JUSTIN_EDW
+    schema: PRD_DEPLOY
+name: Prod Marketing
+type: Environment
