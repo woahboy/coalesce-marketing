@@ -1,5 +1,5 @@
 fileVersion: 1
-id: 4963553b-f910-497a-9d73-af9fc15c0682
+id: fb80c75c-d244-40be-94e3-f772ef8ceafe
 name: STG_PARTSUPP
 operation:
   config:
@@ -19,8 +19,8 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 1bef18a4-1ccb-40fd-a005-90abc0475440
-          stepCounter: 4963553b-f910-497a-9d73-af9fc15c0682
+          columnCounter: 0b32cca1-0c2d-4eea-8437-03c4f8dc0a43
+          stepCounter: fb80c75c-d244-40be-94e3-f772ef8ceafe
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -28,13 +28,13 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: db307744-13f0-42ec-9bbf-d0f538e428a7
-                stepCounter: c94e350e-63ba-42f2-99fe-8fd0ebd4c7ec
+              - columnCounter: 8e4de52d-2984-4807-a13c-655af3a4ab6a
+                stepCounter: 53634121-b7d0-422f-8f9e-ee50fac41281
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 8fd95218-5bdd-443b-b228-e7192ec39651
-          stepCounter: 4963553b-f910-497a-9d73-af9fc15c0682
+          columnCounter: 66b99067-a179-47c0-8e6d-024e00d971f2
+          stepCounter: fb80c75c-d244-40be-94e3-f772ef8ceafe
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -42,13 +42,13 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 90073be0-7249-4ed2-bf26-9e8c28a223a7
-                stepCounter: c94e350e-63ba-42f2-99fe-8fd0ebd4c7ec
+              - columnCounter: 0db9716e-cdb0-46ee-be94-7a775b9809bc
+                stepCounter: 53634121-b7d0-422f-8f9e-ee50fac41281
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: e3e52039-f080-48d2-82ef-8e567c6b03d5
-          stepCounter: 4963553b-f910-497a-9d73-af9fc15c0682
+          columnCounter: 1bb68f25-e2af-4079-ac6c-53814fd69871
+          stepCounter: fb80c75c-d244-40be-94e3-f772ef8ceafe
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -56,13 +56,13 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 6f300689-2163-490f-bc98-49c4cef67882
-                stepCounter: c94e350e-63ba-42f2-99fe-8fd0ebd4c7ec
+              - columnCounter: 59f595ee-212b-4ca0-acc5-4ed14ab98c8e
+                stepCounter: 53634121-b7d0-422f-8f9e-ee50fac41281
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 9ef4f7f6-2177-4f78-bddd-658cf19403f0
-          stepCounter: 4963553b-f910-497a-9d73-af9fc15c0682
+          columnCounter: bb24d4a9-37ac-4ad1-9e5a-c35960497ffb
+          stepCounter: fb80c75c-d244-40be-94e3-f772ef8ceafe
         config: {}
         dataType: NUMBER(12,2)
         description: ""
@@ -70,13 +70,13 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: a48d189e-0a09-474a-a5c4-b0f50cb5e8af
-                stepCounter: c94e350e-63ba-42f2-99fe-8fd0ebd4c7ec
+              - columnCounter: 61c5f9fb-c645-4838-8f2b-de179798d389
+                stepCounter: 53634121-b7d0-422f-8f9e-ee50fac41281
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: d51dd2aa-0465-47dd-9974-3f52084d79ad
-          stepCounter: 4963553b-f910-497a-9d73-af9fc15c0682
+          columnCounter: 20b54553-b775-4e44-b686-34ae9fb5b6ca
+          stepCounter: fb80c75c-d244-40be-94e3-f772ef8ceafe
         config: {}
         dataType: VARCHAR(199)
         description: ""
@@ -84,8 +84,8 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 1210700d-f0bc-404a-8fef-dcffe7e1d59b
-                stepCounter: c94e350e-63ba-42f2-99fe-8fd0ebd4c7ec
+              - columnCounter: 982cbd83-8c88-474a-8adc-3ff51f738a80
+                stepCounter: 53634121-b7d0-422f-8f9e-ee50fac41281
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
@@ -103,7 +103,7 @@ operation:
   name: STG_PARTSUPP
   overrideSQL: false
   schema: ""
-  sqlType: "437"
+  sqlType: "438"
   type: sql
   version: 1
 type: Node

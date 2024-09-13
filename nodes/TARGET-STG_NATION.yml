@@ -1,5 +1,5 @@
 fileVersion: 1
-id: ee613518-e4b4-49ed-868b-92b56d1c7603
+id: b24c200e-a124-46ad-8625-7319c82ca4d1
 name: STG_NATION
 operation:
   config:
@@ -19,8 +19,8 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 51725107-8ebd-4782-a385-03a0257280a4
-          stepCounter: ee613518-e4b4-49ed-868b-92b56d1c7603
+          columnCounter: 0daa458a-730d-4703-b090-1ef6296e0dd7
+          stepCounter: b24c200e-a124-46ad-8625-7319c82ca4d1
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -28,13 +28,13 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: b85bca02-3456-4e72-9285-6fab5f8d9ea1
-                stepCounter: 32b18078-724f-4c47-9957-6a967ecd84a4
+              - columnCounter: 5dab60fa-6547-4da1-9e83-d82c0417ce06
+                stepCounter: 87d69bbf-f408-48a1-8025-d355d2dc9197
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: a006406f-9b28-4b68-b206-ee1b64c53878
-          stepCounter: ee613518-e4b4-49ed-868b-92b56d1c7603
+          columnCounter: a9bf9d46-a80e-4862-b69f-409dea5f7b65
+          stepCounter: b24c200e-a124-46ad-8625-7319c82ca4d1
         config: {}
         dataType: VARCHAR(25)
         description: ""
@@ -42,13 +42,13 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: e9d081f2-73d9-459a-9602-357b8563a5bb
-                stepCounter: 32b18078-724f-4c47-9957-6a967ecd84a4
+              - columnCounter: f7ddb443-cf16-4dfc-a7c4-612ade510798
+                stepCounter: 87d69bbf-f408-48a1-8025-d355d2dc9197
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: dce11bff-ec2b-4704-ad41-8700d2c3f024
-          stepCounter: ee613518-e4b4-49ed-868b-92b56d1c7603
+          columnCounter: 8b7b07fe-f418-4c12-9701-8848cb9203c5
+          stepCounter: b24c200e-a124-46ad-8625-7319c82ca4d1
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -56,13 +56,13 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: af742def-cb2c-4009-85dd-fee947d70242
-                stepCounter: 32b18078-724f-4c47-9957-6a967ecd84a4
+              - columnCounter: a70292b4-fb54-4947-800b-02ad1b3404e8
+                stepCounter: 87d69bbf-f408-48a1-8025-d355d2dc9197
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 60949952-a232-46ba-8ba1-9f66bb3a8c2e
-          stepCounter: ee613518-e4b4-49ed-868b-92b56d1c7603
+          columnCounter: 052225d1-1808-4829-9ba3-8e3293c32528
+          stepCounter: b24c200e-a124-46ad-8625-7319c82ca4d1
         config: {}
         dataType: VARCHAR(152)
         description: ""
@@ -70,8 +70,8 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: b0268b63-fa98-439e-8782-a897a49b12f3
-                stepCounter: 32b18078-724f-4c47-9957-6a967ecd84a4
+              - columnCounter: 96415d12-a8e8-4cae-8b40-fa3aedbe2405
+                stepCounter: 87d69bbf-f408-48a1-8025-d355d2dc9197
             transform: ""
     cteString: ""
     enabledColumnTestIDs: []
@@ -89,7 +89,7 @@ operation:
   name: STG_NATION
   overrideSQL: false
   schema: ""
-  sqlType: "437"
+  sqlType: "438"
   type: sql
   version: 1
 type: Node

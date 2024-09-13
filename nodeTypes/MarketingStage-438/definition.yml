@@ -1,10 +1,10 @@
 fileVersion: 1
-id: "437"
+id: "438"
 isDisabled: false
 metadata:
   defaultStorageLocation: null
   error: null
-  nodeMetadataSpec: |-
+  nodeMetadataSpec: |
     capitalized: Copy of Stage
     short: STG
     plural: Stages
