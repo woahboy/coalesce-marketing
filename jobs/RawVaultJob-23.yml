@@ -1,0 +1,7 @@
+excludeSelector: "{ location: SOURCE name: DIM_CUSTOMER } OR { location: SOURCE name: STG_CUSTOMER } OR { location: SOURCE name: SATV1_CUSTOMER* }"
+fileVersion: 1
+id: "23"
+includeSelector: "{ location: SOURCE-1 name: CUSTOMER }+"
+name: Raw Vault Job
+type: Job
+version: 2

@@ -1,53 +1,22 @@
 fileVersion: 1
-id: persistentStage
-isDisabled: true
+id: "38"
+isDisabled: false
 metadata:
   defaultStorageLocation: null
   error: null
-  nodeMetadataSpec: |
-    capitalized: Persistent Stage
-    short: PSTG
-    plural: Persistent Stages
-    tagColor: '#29B2DB'
-        
+  nodeMetadataSpec: |-
+    capitalized: Copy of Dimension
+    short: DIM
+    tagColor: '#1E339A'
+    plural: Dimensions
+
     config:
-    - groupName: Options
+    - groupName: Super Simple Settings 😁
       items:
-      - type: materializationSelector
-        isRequired: true
-        default: table
-        options:
-        - table
-        - view
-      
       - type: businessKeyColumns
-        isRequired: false
-
-      - type: multisourceToggle
-        enableIf: "{% if node.materializationType == 'table' %} true {% else %} false {% endif %}"
-
-      - type: overrideSQLToggle
-        enableIf: "{% if node.materializationType == 'view' %} true {% else %} false {% endif %}"
-
-      - displayName: Enable Tests
-        attributeName: testsEnabled
-        type: toggleButton
-        default: true
-        
-      - displayName: Pre-SQL
-        attributeName: preSQL
-        type: textBox
-        syntax: sql
-        isRequired: false
-
-      - displayName: Post-SQL
-        attributeName: postSQL
-        type: textBox
-        syntax: sql
-        isRequired: false
+        isRequired: true
 
     systemColumns:
-
     - displayName: '{{NODE_NAME}}_KEY'
       transform: ''
       dataType: NUMBER
@@ -89,5 +58,5 @@ metadata:
       dataType: TIMESTAMP
       placement: end
       attributeName: isSystemUpdateDate
-name: Persistent Stage
+name: Simple Dim
 type: NodeType

@@ -1,0 +1,113 @@
+fileVersion: 1
+id: "135"
+isDisabled: false
+metadata:
+  defaultStorageLocation: TARGET
+  error: null
+  nodeMetadataSpec: |
+    capitalized: Dynamic Table
+    short: DT
+    plural: Dynamic Tables
+    tagColor: '#2299C4'
+
+    deployStrategy: advanced
+
+    config:
+    - groupName: Dynamic Table
+      items:
+        
+      - displayName: Refresh Warehouse
+        attributeName: whName
+        type: textBox
+        default: 'compute_wh'
+        isRequired: true
+
+      - type: tabular
+        displayName: 'Lag Specification'
+        attributeName: lagSpec
+        columns:
+      
+        -  type: textBox
+           displayName: Time Value
+           attributeName: lagNumber
+           default: 60
+           isRequired: true
+        
+        -  type: dropdownSelector
+           displayName: Time Period
+           attributeName: lagType
+           default: Minutes
+           options:
+           - Seconds
+           - Minutes
+           - Hours
+           - Days
+           isRequired: true
+        
+        isRequired: true
+
+    - groupName: Change Tracking Options
+      items:
+
+      - displayName: Enable Change Tracking
+        attributeName: trackChanges
+        type: toggleButton
+        default: false
+
+      - displayName: Table Key Column(s)
+        attributeName: keyColumn
+        type: columnSelector
+        isRequired: false
+        enableIf: "{{ config.trackChanges }}"
+
+      - displayName: Row Update Timestamp Column
+        attributeName: timeColumn
+        type: columnSelector
+        isRequired: false
+        enableIf: "{{ config.trackChanges }}"
+
+      - displayName: Propagate Last Non-Delete
+        attributeName: nonDelete
+        type: toggleButton
+        default: false
+        enableIf: "{{ config.trackChanges }}"
+
+      - displayName: DML Identifier Column
+        attributeName: dmlColumn
+        type: columnSelector
+        isRequired: false
+        enableIf: "{{ config.nonDelete and config.trackChanges }}"
+     
+      - displayName: Delete Indentifier Value
+        attributeName: deleteValue
+        type: textBox
+        default: 'D'
+        isRequired: false
+        enableIf: "{{ config.nonDelete and config.trackChanges }}"
+
+      - displayName: Current Values Only
+        attributeName: isOnlyCurrent
+        type: toggleButton
+        default: false
+        enableIf: "{{ config.trackChanges }}"
+     
+    - groupName: Other Options
+      items:
+      - displayName: Enable Tests
+        attributeName: testsEnabled
+        type: toggleButton
+        default: true
+        
+      - displayName: Pre-SQL
+        attributeName: preSQL
+        type: textBox
+        syntax: sql
+        isRequired: false
+
+      - displayName: Post-SQL
+        attributeName: postSQL
+        type: textBox
+        syntax: sql
+        isRequired: false
+name: Dynamic Table
+type: NodeType
