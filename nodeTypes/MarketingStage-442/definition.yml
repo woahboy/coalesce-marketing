@@ -1,14 +1,14 @@
 fileVersion: 1
-id: "383"
+id: "442"
 isDisabled: false
 metadata:
   defaultStorageLocation: null
   error: null
   nodeMetadataSpec: |
-    capitalized: Distinct Stage
+    capitalized: Marketing Stage
     short: STG
     plural: Stages
-    tagColor: '#2EB67D'
+    tagColor: 'purple'
 
     config:
     - groupName: Options
@@ -19,10 +19,6 @@ metadata:
         - table
         - view
         isRequired: true
-
-      - type: toggleButton
-        attributeName: selectDistinct
-        displayName: Distinct
 
       - type: multisourceToggle
         enableIf: "{% if node.materializationType == 'table' %} true {% else %} false {% endif %}" 
@@ -50,17 +46,5 @@ metadata:
         attributeName: testsEnabled
         type: toggleButton
         default: true
-        
-      - displayName: Pre-SQL
-        attributeName: preSQL
-        type: textBox
-        syntax: sql
-        isRequired: false
-
-      - displayName: Post-SQL
-        attributeName: postSQL
-        type: textBox
-        syntax: sql
-        isRequired: false
-name: Copy of Stage
+name: Marketing Stage
 type: NodeType
