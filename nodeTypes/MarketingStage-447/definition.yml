@@ -1,10 +1,10 @@
 fileVersion: 1
-id: "446"
+id: "447"
 isDisabled: false
 metadata:
   defaultStorageLocation: null
   error: null
-  nodeMetadataSpec: |
+  nodeMetadataSpec: |-
     capitalized: Marketing Stage
     short: STG
     plural: Stages
