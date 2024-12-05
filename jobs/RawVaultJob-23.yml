@@ -4,4 +4,3 @@ id: "23"
 includeSelector: "{ location: SOURCE-1 name: CUSTOMER }+"
 name: Raw Vault Job
 type: Job
-version: 2
