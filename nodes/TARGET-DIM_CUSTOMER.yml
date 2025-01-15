@@ -1,5 +1,5 @@
 fileVersion: 1
-id: 117b7ea9-a670-4007-b700-282bc3303e7a
+id: f294e743-4c53-4868-bcc4-075e570444df
 name: DIM_CUSTOMER
 operation:
   config:
@@ -20,8 +20,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 99ac27ba-9cce-4875-a32f-34c206da5cb7
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: 94a8b66a-03c9-4cc4-b4cf-48cc2c76b516
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: NUMBER
         defaultValue: ""
@@ -34,113 +34,112 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: d08ffa69-536c-4dad-b3ac-cbcd02d2eb53
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: 33ec3e20-46f1-40f3-80f2-f3e91780df87
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: NUMBER(38,0)
-        description: |-
-          - Represents the customer key, uniquely identifying each customer in the STG_CUSTOMER stage table.
-          - This key is used in downstream applications for reporting and analytics purposes.
-          - The column is derived from the 'C_CUSTKEY' column in the 'STG_CUSTOMER' stage table, with no transformations applied. It is also designated as a business key, ensuring data integrity.
+        description: ""
         isBusinessKey: true
         name: C_CUSTKEY
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 539b25a6-ae35-41b2-8b25-bbc21e12548f
-                stepCounter: 96623960-1532-47b8-b082-a87fc5f09299
+              - columnCounter: 3faf3de1-c671-441c-beda-03cb982ab7f6
+                stepCounter: adba5eb2-292d-478e-beb0-e5de4004409c
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 136a96ab-85c8-4fee-b7fb-287981e5b0b6
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: bac7f29d-4d6a-4f8a-9026-2b67d80e296d
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: VARCHAR(25)
-        description: |-
-          - Represents the customer's name, as defined by the TPC-H benchmark.
-          - This column is used in downstream applications for reporting and analytics purposes, such as customer segmentation and analysis.
-          - The column is directly derived from the 'C_NAME' column in the 'STG_CUSTOMER' stage table, with no transformations applied. It is also a change tracking column, indicating any modifications to the customer's name.
+        description: ""
         isChangeTracking: true
         name: C_NAME
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: d109973f-f42e-4bc8-aee5-74027b87cb6e
-                stepCounter: 96623960-1532-47b8-b082-a87fc5f09299
+              - columnCounter: 94a5cfd9-f32d-4609-a303-00e3740e1f80
+                stepCounter: adba5eb2-292d-478e-beb0-e5de4004409c
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: a7f9cdff-f72f-4ce9-9a9f-29e31589a8d6
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: 8038ee4d-1b91-4549-9e30-e7da0d7b65ed
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: VARCHAR(40)
-        description: |-
-          - Represents the customer's address, as defined by the TPC-H benchmark.
-          - This column is used in downstream applications for reporting and analytics purposes, such as customer location analysis and geospatial data analysis.
-          - The column is directly derived from the 'C_ADDRESS' column in the 'STG_CUSTOMER' stage table, with no transformations applied. It is also a change tracking column, indicating any modifications to the customer's address.
+        description: ""
         isChangeTracking: true
         name: C_ADDRESS
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 3942f47d-f964-41b8-8de9-8769bdc26832
-                stepCounter: 96623960-1532-47b8-b082-a87fc5f09299
+              - columnCounter: d55c7848-589c-44b4-8a57-e19e6027588c
+                stepCounter: adba5eb2-292d-478e-beb0-e5de4004409c
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 61440243-9377-4f43-a8cb-e0164c84a39b
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: b6bc11e9-b938-4fa2-bf56-9c996f2b2eb3
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: VARCHAR(15)
-        description: |-
-          - Represents the customer's phone number, as defined by the TPC-H benchmark.
-          - This column is used in downstream applications for reporting and analytics purposes, such as customer contact analysis and communication patterns.
-          - The column is directly derived from the 'C_PHONE' column in the 'STG_CUSTOMER' stage table, with no transformations applied. It is also a change tracking column, indicating any modifications to the customer's phone number.
-        isChangeTracking: true
+        description: ""
         name: C_PHONE
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 91d3a03b-d12c-4c0d-ae4e-c8df620ea43e
-                stepCounter: 96623960-1532-47b8-b082-a87fc5f09299
+              - columnCounter: ef4c9cd9-4372-4ebc-8ce0-ae6e7b196180
+                stepCounter: adba5eb2-292d-478e-beb0-e5de4004409c
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: d53c44f1-6ee3-4c33-898d-f0cd9461bc7f
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: 77c8884b-161d-4977-94f4-0e1ae51e7c63
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: NUMBER(12,2)
-        description: |-
-          - Represents the customer's account balance, as defined by the TPC-H benchmark.
-          - This column is used in downstream applications for reporting and analytics purposes, such as customer financial analysis and credit risk assessment.
-          - The column is directly derived from the 'C_ACCTBAL' column in the 'STG_CUSTOMER' stage table, with no transformations applied. It is also a change tracking column, indicating any modifications to the customer's account balance.
-        isChangeTracking: true
+        description: ""
         name: C_ACCTBAL
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 586a7b99-4dfd-4edc-b826-d80e1c38daa1
-                stepCounter: 96623960-1532-47b8-b082-a87fc5f09299
+              - columnCounter: 3098c298-c248-4323-a0e9-0c135307bf96
+                stepCounter: adba5eb2-292d-478e-beb0-e5de4004409c
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 0b842aa2-3585-4b99-9419-aa4af7b1a04b
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: c2397236-854f-4bc6-b863-2fc826e22049
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: VARCHAR(10)
         description: ""
-        isChangeTracking: true
         name: C_MKTSEGMENT
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 78834087-cfd6-41e8-b19b-54faaf47c922
-                stepCounter: 96623960-1532-47b8-b082-a87fc5f09299
+              - columnCounter: 08e3b64a-d26e-4a5f-9907-adc91977f32a
+                stepCounter: adba5eb2-292d-478e-beb0-e5de4004409c
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 70138603-3526-47b5-8cb8-e59b5926d9b5
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: ed4cb9e4-befb-4a15-89f0-171ee2531481
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
+        config: {}
+        dataType: VARCHAR(117)
+        description: ""
+        name: C_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: cfd6ebb1-9b3f-4748-a1eb-2b93876c3112
+                stepCounter: adba5eb2-292d-478e-beb0-e5de4004409c
+            transform: ""
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f2ad575a-373e-4882-9ece-a589ffa88bc4
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: VARCHAR(10)
         description: ""
@@ -148,13 +147,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 61066269-c75c-4d87-8932-3d2d9df9697e
-                stepCounter: 96623960-1532-47b8-b082-a87fc5f09299
+              - columnCounter: 5bb82a40-56a2-435d-9464-7efabce600fa
+                stepCounter: adba5eb2-292d-478e-beb0-e5de4004409c
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: a775a549-2e40-4206-8739-7badaabc99f5
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: 559803bf-ce4e-4859-b644-2794d3adb9b5
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: VARCHAR(25)
         description: ""
@@ -162,13 +161,13 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: efab74f2-7107-425e-8d4a-2793a8c3ad13
-                stepCounter: 96623960-1532-47b8-b082-a87fc5f09299
+              - columnCounter: 55fde16a-6d9c-488c-ba90-6ee2bc7ecad9
+                stepCounter: adba5eb2-292d-478e-beb0-e5de4004409c
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 1e7f69b3-4710-4abf-9666-d90db9ff142f
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: 72ff1abc-2d80-4d5b-abfb-174be606d30d
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: VARCHAR(152)
         description: ""
@@ -176,13 +175,13 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 51543c46-c738-4257-abef-90942f5c5209
-                stepCounter: 96623960-1532-47b8-b082-a87fc5f09299
+              - columnCounter: d8847707-1a51-44fb-a347-86a824fc279d
+                stepCounter: adba5eb2-292d-478e-beb0-e5de4004409c
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 8d4a541e-d109-496a-a826-34c664f2ff16
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: ea04c898-e933-4714-8331-baa3ea508a19
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: VARCHAR(25)
         description: ""
@@ -190,13 +189,13 @@ operation:
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 33b843ab-7920-4933-aa26-d85d4a6595d6
-                stepCounter: 96623960-1532-47b8-b082-a87fc5f09299
+              - columnCounter: 46ab6c27-ff4b-48ce-8577-f5e854ec1481
+                stepCounter: adba5eb2-292d-478e-beb0-e5de4004409c
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 6e38d1b3-2e99-465d-b7b8-daaeb0034f4a
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: df2e9883-e583-44f0-87f0-93a527eb60a3
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: VARCHAR(152)
         description: ""
@@ -204,16 +203,16 @@ operation:
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 19ee4a4a-278b-4fa5-a9c4-7e0a6e1e5a7c
-                stepCounter: 96623960-1532-47b8-b082-a87fc5f09299
+              - columnCounter: 79499db4-37cf-4bee-8ab2-4bb0ccde8ba3
+                stepCounter: adba5eb2-292d-478e-beb0-e5de4004409c
             transform: ""
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 801377d8-c295-4e18-b5ad-7d78d7692d9d
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: 0ebb0152-f699-4f50-80b0-c8d4b52eeef8
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: NUMBER
         defaultValue: ""
@@ -229,8 +228,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: f6a61ab9-89d7-4820-9603-f3c9ea54cf3d
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: 5d0c3bfb-1725-4c08-9564-71ecb2b48f54
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: VARCHAR
         defaultValue: ""
@@ -246,8 +245,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: e85dbb6f-c71e-481a-a908-b26d6261cd1b
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: d38a4173-15bf-4c07-a3b8-f4b7d20e4bf6
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -263,8 +262,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 8925c62d-efdf-4e60-a644-6ebb6dd21591
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: e4628f3a-b59b-41e6-a93d-dc9e519bb0db
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -280,8 +279,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 260257a7-a310-43d4-b31a-6acc5222ffe0
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: 0c49eb51-35cd-45ad-9a48-a2acff12c238
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -297,8 +296,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 70d8379d-8217-425a-a0b9-323c80b04b14
-          stepCounter: 117b7ea9-a670-4007-b700-282bc3303e7a
+          columnCounter: bf3dfe7c-d692-44b0-9ab4-d48655afd3da
+          stepCounter: f294e743-4c53-4868-bcc4-075e570444df
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
