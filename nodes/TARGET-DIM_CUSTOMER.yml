@@ -1,5 +1,5 @@
 fileVersion: 1
-id: df411ee9-c946-4331-a6e4-04fb6b28968c
+id: bd510753-3562-4630-bad2-8fdd8b440100
 name: DIM_CUSTOMER
 operation:
   config:
@@ -8,12 +8,7 @@ operation:
     testsEnabled: true
   database: ""
   deployEnabled: true
-  description: |-
-    1. The Coalesce SQL node generates a dimension table named DIM_CUSTOMER,  which represents a denormalized view of customer data. 
-    2. The node joins and enriches data from the STG_CUSTOMER stage table, transforming it into a business-friendly format. 
-    3. Key fields include C_CUSTKEY (business key), C_NAME, C_ADDRESS, CUSTOMER_PHONE_NUMBER, C_ACCTBAL, C_MKTSEGMENT, C_VALUE, C_COMMENT, N_NAME, N_COMMENT, R_NAME, R_COMMENT. 
-    4.  Change tracking is implemented for fields that may change over time, ensuring data integrity and enabling analysis of customer trends. 
-    5. The resulting table is optimized for downstream applications, such as customer segmentation, marketing campaign targeting, and customer relationship management.
+  description: Customer data as defined by TPC-H
   isMultisource: false
   locationName: TARGET
   materializationType: table
@@ -25,8 +20,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 2e061225-58fd-4495-8cce-d48ad8f17a2a
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: ff38999b-19a8-4d71-9965-bcf8b0b6acd5
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
         dataType: NUMBER
         defaultValue: ""
@@ -39,240 +34,182 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: f1a6c7e4-c06f-4cb7-8032-4d5cb32f6423
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: abfe521f-25d5-4dd1-8833-a947d871d3c2
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
         dataType: NUMBER(38,0)
-        description: |-
-          - Unique identifier for each customer, extracted from the STG_CUSTOMER stage table. 
-          - Serves as the business key for the customer dimension table. 
-          - Used to identify customers in reports and downstream analytics. 
-          - Source: STG_CUSTOMER.C_CUSTKEY 
-          - Data type: NUMBER(38,0)
+        description: ""
         isBusinessKey: true
-        name: CUSTOMER_CUSTKEY
+        name: C_CUSTKEY
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 3afde222-0f3d-435a-a6d6-c4bc823a82a0
-                stepCounter: aaa4ca4e-2d59-40f1-ae84-51053fb80576
+              - columnCounter: 0487dbb2-5030-4972-91c0-f9aca2890706
+                stepCounter: 80b6b1d8-021d-41ed-97b7-5a84739129f5
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 8dc0dcd4-f8af-4709-a1fb-4fce550e9e64
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: 1b420cd6-1a7b-44be-b544-c14153130e19
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
-        dataType: STRING
-        description: |-
-          - Customer's name, extracted from the STG_CUSTOMER stage table. 
-          - Used for customer identification in reports and downstream applications. 
-          - Subject to change tracking to capture updates to customer names. 
-          - Source: STG_CUSTOMER.C_NAME 
-          - Data type: STRING
+        dataType: VARCHAR(25)
+        description: ""
         isChangeTracking: true
-        name: CUSTOMER_NAME
+        name: C_NAME
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: ddc49427-96ad-4e16-8278-f0ba7b454a0a
-                stepCounter: aaa4ca4e-2d59-40f1-ae84-51053fb80576
+              - columnCounter: bb664c76-ac92-4737-8fd7-448e76a14482
+                stepCounter: 80b6b1d8-021d-41ed-97b7-5a84739129f5
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: c0cf8dd1-28d7-4f05-a209-ffb68c36fcaa
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: fe7362b7-0199-4ee5-91af-4300c017ce77
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
-        dataType: STRING
-        description: |-
-          - Customer's address, extracted from the STG_CUSTOMER stage table. 
-          - Used for identifying customer location in reports and downstream analytics. 
-          - Subject to change tracking to capture updates to customer addresses. 
-          - Source: STG_CUSTOMER.C_ADDRESS 
-          - Data type: STRING
+        dataType: VARCHAR(40)
+        description: ""
         isChangeTracking: true
-        name: CUSTOMER_ADDRESS
+        name: C_ADDRESS
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 90cd4f41-3712-4de3-975d-a4ccc5bb8bc4
-                stepCounter: aaa4ca4e-2d59-40f1-ae84-51053fb80576
+              - columnCounter: 714fe39b-9915-45b2-a6b4-654ca42af697
+                stepCounter: 80b6b1d8-021d-41ed-97b7-5a84739129f5
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: a6c5b478-e0cd-456a-8b36-e5e458f6a84e
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: a95e37b6-61ea-42b4-a0d5-c0483e2a3522
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
-        dataType: STRING
-        description: |-
-          - Customer's phone number, extracted from the STG_CUSTOMER stage table. 
-          - Used to contact customers for customer service or marketing purposes. 
-          - Subject to change tracking to capture updates to customer phone numbers. 
-          - Source: STG_CUSTOMER.CUSTOMER_PHONE_NUMBER 
-          - Data type: STRING
-        isChangeTracking: true
-        name: CUSTOMER_PHONE_NUMBER
+        dataType: VARCHAR(15)
+        description: ""
+        name: C_PHONE
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 6f120560-e7e3-42eb-9c0d-afacb8331c55
-                stepCounter: aaa4ca4e-2d59-40f1-ae84-51053fb80576
+              - columnCounter: 744cc185-fd13-4753-976b-ea2a9eb6c20b
+                stepCounter: 80b6b1d8-021d-41ed-97b7-5a84739129f5
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 9c81f567-2d6e-4cea-86b8-1e6e22a6d0cc
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: 3d8a8f24-c1f5-4a16-91c2-834d9a724ef1
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
         dataType: NUMBER(12,2)
-        description: |-
-          - Customer's account balance, extracted from the STG_CUSTOMER stage table. 
-          - Used to track outstanding payments and assess customer creditworthiness. 
-          - Subject to change tracking to reflect changes in account balances. 
-          - Source: STG_CUSTOMER.C_ACCTBAL 
-          - Data type: NUMBER(12,2)
-        isChangeTracking: true
-        name: CUSTOMER_ACCTBAL
+        description: ""
+        name: C_ACCTBAL
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 9d1acb2d-9688-4480-9e7c-72ab31856a28
-                stepCounter: aaa4ca4e-2d59-40f1-ae84-51053fb80576
+              - columnCounter: b1db7ed9-40ef-4cc3-9de6-402fbd092f35
+                stepCounter: 80b6b1d8-021d-41ed-97b7-5a84739129f5
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 1d23e0e4-3e86-4999-aef9-b33160e69e4f
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: 347f251c-1820-491d-b9e2-09aecb08fa3b
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
-        dataType: STRING
-        description: |-
-          - Customer's marketing segment, extracted from the STG_CUSTOMER stage table. 
-          - Used to target customers with relevant marketing campaigns and promotions. 
-          - Source: STG_CUSTOMER.C_MKTSEGMENT 
-          - Data type: STRING
-        isChangeTracking: true
-        name: CUSTOMER_MKTSEGMENT
+        dataType: VARCHAR(10)
+        description: ""
+        name: C_MKTSEGMENT
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: ed4d0487-a686-4f66-9ce2-50bf0d7395bc
-                stepCounter: aaa4ca4e-2d59-40f1-ae84-51053fb80576
+              - columnCounter: c18f5894-69d0-43d8-99bd-e479c8532a13
+                stepCounter: 80b6b1d8-021d-41ed-97b7-5a84739129f5
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: a8d564b7-62f2-4d7c-bdaf-0a1ba5bda628
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: c5af7093-e262-462f-ac5c-d43114d55e45
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
-        dataType: STRING
-        description: |-
-          - Customer's value segment, extracted from the STG_CUSTOMER stage table. 
-          - Used to identify high-value customers and tailor service offerings accordingly. 
-          - Source: STG_CUSTOMER.C_VALUE 
-          - Data type: STRING
-        isChangeTracking: true
-        name: CUSTOMER_VALUE
+        dataType: VARCHAR(117)
+        description: ""
+        name: C_COMMENT
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: ed4ac720-7ac7-4e91-8fea-4ff247daf690
-                stepCounter: aaa4ca4e-2d59-40f1-ae84-51053fb80576
+              - columnCounter: 690ff82a-aafd-4e1f-bc2f-60f4546cedce
+                stepCounter: 80b6b1d8-021d-41ed-97b7-5a84739129f5
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: f2a36274-6a8c-40b3-9758-7525ecf65987
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: c14edc79-dbc1-42a7-a515-c024d79c84aa
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
-        dataType: STRING
-        description: |-
-          - Free-text comments related to the customer, extracted from the STG_CUSTOMER stage table. 
-          - Used for storing additional notes or relevant information about the customer. 
-          - Source: STG_CUSTOMER.C_COMMENT 
-          - Data type: STRING
-        isChangeTracking: true
-        name: CUSTOMER_COMMENT
+        dataType: VARCHAR(10)
+        description: ""
+        name: C_VALUE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 864bf51c-8068-46e4-b3b2-b40ecd91aeef
-                stepCounter: aaa4ca4e-2d59-40f1-ae84-51053fb80576
+              - columnCounter: a8c3540a-a05d-460a-a09b-1e68bce77079
+                stepCounter: 80b6b1d8-021d-41ed-97b7-5a84739129f5
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 3918040a-de5b-4ecb-8117-24bb2a6243b7
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: 55e0573a-cd0e-4d9d-abcb-dfe01fce67a7
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
-        dataType: STRING
-        description: |-
-          - Name of the nation associated with the customer, extracted from the STG_CUSTOMER stage table. 
-          - Used to identify the nation where the customer is located in reports and analytics. 
-          - Source: STG_CUSTOMER.N_NAME 
-          - Data type: STRING
-        name: NATION_NAME
+        dataType: VARCHAR(25)
+        description: ""
+        name: N_NAME
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 2457b979-9e74-4675-99d3-fe4c834854d0
-                stepCounter: aaa4ca4e-2d59-40f1-ae84-51053fb80576
+              - columnCounter: 927f224c-b079-4069-be72-603bf8befa69
+                stepCounter: 80b6b1d8-021d-41ed-97b7-5a84739129f5
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 66029333-025d-48d0-92cd-5ba68b837155
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: c8940345-698f-4426-ad36-e89410de79c6
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
-        dataType: STRING
-        description: |-
-          - Free-text comments related to the nation, extracted from the STG_CUSTOMER stage table. 
-          - Used for storing additional notes or relevant information about the nation. 
-          - Source: STG_CUSTOMER.N_COMMENT 
-          - Data type: STRING
-        name: NATION_COMMENT
+        dataType: VARCHAR(152)
+        description: ""
+        name: N_COMMENT
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 03501e8e-63f6-46e7-8b2f-8fcc8f7bd487
-                stepCounter: aaa4ca4e-2d59-40f1-ae84-51053fb80576
+              - columnCounter: eb6c88cc-fd52-4340-b6e9-c8601002c16a
+                stepCounter: 80b6b1d8-021d-41ed-97b7-5a84739129f5
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 8db80922-7b4e-4372-b0f1-8a8dc1703b41
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: c5f116f2-a1df-413b-a51e-1e770ce4ec99
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
-        dataType: STRING
-        description: |-
-          - Name of the region associated with the customer, extracted from the STG_CUSTOMER stage table. 
-          - Used to identify the region where the customer is located in reports and analytics. 
-          - Source: STG_CUSTOMER.R_NAME 
-          - Data type: STRING
-        name: REGION_NAME
+        dataType: VARCHAR(25)
+        description: ""
+        name: R_NAME
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 1eb31155-733c-4852-8296-03a57654820c
-                stepCounter: aaa4ca4e-2d59-40f1-ae84-51053fb80576
+              - columnCounter: 05f2db0e-622e-4e5a-971d-20fe0665e44b
+                stepCounter: 80b6b1d8-021d-41ed-97b7-5a84739129f5
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 6702cd8e-9cd3-4f89-b886-41c84afcde6b
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: 951142c2-0d77-4d26-af0f-69411d5b42f8
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
-        dataType: STRING
-        description: |-
-          - Free-text comments related to the region, extracted from the STG_CUSTOMER stage table. 
-          - Used for storing additional notes or relevant information about the region. 
-          - Source: STG_CUSTOMER.R_COMMENT 
-          - Data type: STRING
-        name: REGION_COMMENT
+        dataType: VARCHAR(152)
+        description: ""
+        name: R_COMMENT
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 9564e975-0922-4ae8-ac94-5c80afb0eca7
-                stepCounter: aaa4ca4e-2d59-40f1-ae84-51053fb80576
+              - columnCounter: f56ea1a0-5cbf-40eb-92a7-5bcd06b66d81
+                stepCounter: 80b6b1d8-021d-41ed-97b7-5a84739129f5
             transform: ""
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: bca7f186-9efc-46e4-9981-5635c6afe6df
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: 60efe290-3508-4135-8112-ab24799ac26c
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
         dataType: NUMBER
         defaultValue: ""
@@ -288,10 +225,10 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: ece5e2b3-d9ab-40be-9955-abdfa38c499c
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: aba2bb71-de53-43c6-8039-4655c5d0ca41
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
-        dataType: STRING
+        dataType: VARCHAR
         defaultValue: ""
         description: ""
         isSystemCurrentFlag: true
@@ -305,8 +242,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: e32b77f8-522c-4bd1-9f21-269d3a9a8b6c
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: 133ca6c6-14ce-4a3a-8bff-86b6fd8b185d
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -322,8 +259,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 21f51a95-4d3f-4969-991f-3924b68f5d5a
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: 66d6bfdc-c187-4cc5-b681-e194ae082eb0
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -339,8 +276,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 400570e8-edec-4188-94a4-f6f0a57c9e34
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: 8efec4bf-bad0-47fb-9b27-93437f9dd8ce
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -356,8 +293,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: ce598ea4-ffe3-4684-8157-328471302f46
-          stepCounter: df411ee9-c946-4331-a6e4-04fb6b28968c
+          columnCounter: 717d4b6c-6a07-4d32-831e-9f8724cac020
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
@@ -368,6 +305,23 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 00fc3536-a407-40e3-95ca-4ee06ef27a81
+          stepCounter: bd510753-3562-4630-bad2-8fdd8b440100
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: C_NATIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 30ee2a6f-ef4b-4e80-8d61-7cdba2e1d246
+                stepCounter: 80b6b1d8-021d-41ed-97b7-5a84739129f5
+            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
