@@ -1,0 +1,300 @@
+fileVersion: 1
+id: c6f49bd5-84d9-4e80-a2e7-940a13aff01c
+name: DIM_SUPPLIER
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: Supplier data as defined by TPC-H
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 780f1a4f-0d27-4517-90ec-599b81d51f75
+          stepCounter: c6f49bd5-84d9-4e80-a2e7-940a13aff01c
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: |-
+          - This column is a system-generated surrogate key for the supplier dimension table.
+          - It uniquely identifies each supplier record within the data warehouse.
+          - As a primary key, it ensures data integrity and enables efficient data retrieval and joins with other fact or dimension tables.
+          - This key is crucial for tracking supplier-related metrics and performance in downstream reports and analyses.
+        isSurrogateKey: true
+        name: DIM_SUPPLIER_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f62367db-a98d-48c2-ad98-0c22fa4b48c8
+          stepCounter: c6f49bd5-84d9-4e80-a2e7-940a13aff01c
+        config: {}
+        dataType: NUMBER(38,0)
+        description: |-
+          - This column represents the supplier's primary key from the source system, STG_SUPPLIER.
+          - It serves as a business key, originating from the 'S_SUPPKEY' column in the source table.
+          - It is essential for identifying suppliers and linking supplier information across different systems.
+          - This key is used to maintain consistent identification of suppliers throughout the data pipeline, and for integration with other systems.
+        isBusinessKey: true
+        name: S_SUPPKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6c2b71d5-ef31-47a5-9561-7636d5dd7dd0
+                stepCounter: 6f7ee6f0-e3a1-4498-a7fd-5fe5f0ed9ed0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a4bc454f-a128-4c78-abf7-594c693eb5fd
+          stepCounter: c6f49bd5-84d9-4e80-a2e7-940a13aff01c
+        config: {}
+        dataType: VARCHAR(25)
+        description: |-
+          - This column contains the name of the supplier, sourced directly from the 'S_NAME' column of the STG_SUPPLIER table.
+          - It provides descriptive information about the supplier and is used in reports and analyses to identify specific suppliers.
+          - The supplier name is a key attribute for understanding supplier relationships and performance and is essential for supplier-related reports and KPIs.
+        name: S_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f4340465-3374-4046-ac2a-1766cdcff186
+                stepCounter: 6f7ee6f0-e3a1-4498-a7fd-5fe5f0ed9ed0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1d488d08-52b7-49c4-9fa9-b9c977731ce6
+          stepCounter: c6f49bd5-84d9-4e80-a2e7-940a13aff01c
+        config: {}
+        dataType: VARCHAR(40)
+        description: |-
+          - This column stores the physical address of the supplier, extracted from the 'S_ADDRESS' column of the STG_SUPPLIER source table.
+          - It provides location information for the supplier, useful for geographic analysis and logistics planning.
+          - The supplier address is valuable for understanding the distribution and regional aspects of the supplier network.
+        name: S_ADDRESS
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8c46ffea-dfb9-4109-81e5-c86b17569e84
+                stepCounter: 6f7ee6f0-e3a1-4498-a7fd-5fe5f0ed9ed0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 560fd8db-d1b3-4d73-90dc-8d3073402e59
+          stepCounter: c6f49bd5-84d9-4e80-a2e7-940a13aff01c
+        config: {}
+        dataType: NUMBER(38,0)
+        description: |-
+          - This column represents the foreign key to the nation dimension, indicating the nation in which the supplier is located.
+          - It is sourced directly from the 'S_NATIONKEY' column in the STG_SUPPLIER table.
+          - It enables linking supplier data to nation-specific information, such as economic indicators or regional performance metrics.
+          - This key facilitates analyses of supplier distribution and performance by geographic region.
+        name: S_NATIONKEY
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a8055e6b-e321-4a0f-92c0-8cfbee34dbc9
+                stepCounter: 6f7ee6f0-e3a1-4498-a7fd-5fe5f0ed9ed0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 80222da1-5efb-44b5-a12f-0da12a61e752
+          stepCounter: c6f49bd5-84d9-4e80-a2e7-940a13aff01c
+        config: {}
+        dataType: VARCHAR(15)
+        description: |-
+          - This column contains the phone number of the supplier, obtained from the 'S_PHONE' column in the STG_SUPPLIER table.
+          - It provides contact information for the supplier, useful for communication and operational purposes.
+          - The supplier's phone number supports supply chain management and enables direct engagement with suppliers.
+        name: S_PHONE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a69d72cc-a44f-4d17-9061-bd60bdfbf935
+                stepCounter: 6f7ee6f0-e3a1-4498-a7fd-5fe5f0ed9ed0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 80e15f40-3473-4f28-b18e-e5fb6c494a03
+          stepCounter: c6f49bd5-84d9-4e80-a2e7-940a13aff01c
+        config: {}
+        dataType: NUMBER(12,2)
+        description: |-
+          - This column stores the account balance of the supplier, sourced from the 'S_ACCTBAL' column of the STG_SUPPLIER table.
+          - It represents the financial standing of the supplier and is used in financial analyses and risk assessments.
+          - The supplier account balance is a key metric for evaluating supplier financial health and its impact on the supply chain.
+        name: S_ACCTBAL
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 296a3d71-19d2-44e8-8195-06892c4fab63
+                stepCounter: 6f7ee6f0-e3a1-4498-a7fd-5fe5f0ed9ed0
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 69322689-c789-44ff-826c-46291114d4ed
+          stepCounter: c6f49bd5-84d9-4e80-a2e7-940a13aff01c
+        config: {}
+        dataType: VARCHAR(101)
+        description: |-
+          - This column contains descriptive comments about the supplier, extracted from the 'S_COMMENT' column of the STG_SUPPLIER table.
+          - It provides additional context and qualitative information about the supplier, which can be useful for understanding specific supplier characteristics or relationships.
+          - This column allows for capturing nuanced supplier details that may not be available in structured data fields.
+        name: S_COMMENT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ea9ea7ff-79c2-420a-866d-1358f1b236b0
+                stepCounter: 6f7ee6f0-e3a1-4498-a7fd-5fe5f0ed9ed0
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6a16ea4f-d539-4f12-87b6-c717ed06f2c0
+          stepCounter: c6f49bd5-84d9-4e80-a2e7-940a13aff01c
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: |-
+          - This column is system-generated and tracks the version number of the record.
+          - It is automatically updated with each change to the record, facilitating auditing and historical analysis.
+          - The version number allows for tracking data lineage and identifying the most recent version of a record.
+        isSystemVersion: true
+        name: SYSTEM_VERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7024ad91-52d3-498a-878f-bf9eb3983d04
+          stepCounter: c6f49bd5-84d9-4e80-a2e7-940a13aff01c
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: |-
+          - This column is system-generated and indicates whether the record is the current version.
+          - It is a flag that is set to true for the latest version of a record and false for historical versions.
+          - The current flag simplifies querying for the most up-to-date information and supports temporal data analysis.
+        isSystemCurrentFlag: true
+        name: SYSTEM_CURRENT_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7ca9ffa4-3117-4e72-ada9-6c46b493b028
+          stepCounter: c6f49bd5-84d9-4e80-a2e7-940a13aff01c
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: |-
+          - This column is system-generated and represents the timestamp when the record became active.
+          - It is populated using the `CURRENT_TIMESTAMP` function when a new record is created or an existing record is updated.
+          - It allows for tracking the effective start date of a record's validity and supports temporal data analysis.
+        isSystemStartDate: true
+        name: SYSTEM_START_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 654018ad-1a1e-4eb6-a480-262b5f27a9e4
+          stepCounter: c6f49bd5-84d9-4e80-a2e7-940a13aff01c
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: |-
+          - This column is system-generated and represents the timestamp when the record is no longer considered active.
+          - It is defaulted to '2999-12-31 00:00:00' and updated when a record is superseded by a new version.
+          - This column facilitates historical data analysis by defining the period during which a record was valid.
+        isSystemEndDate: true
+        name: SYSTEM_END_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d7fb7c0d-e1bb-4509-bce0-f17f91f4d7fc
+          stepCounter: c6f49bd5-84d9-4e80-a2e7-940a13aff01c
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: |-
+          - This column is system-generated and captures the timestamp when the record was initially created.
+          - It uses the `CURRENT_TIMESTAMP` function to record the exact moment of creation.
+          - This timestamp is crucial for auditing purposes and understanding the data's creation timeline.
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 43768e6d-f6e4-4761-8979-794cfffaebfc
+          stepCounter: c6f49bd5-84d9-4e80-a2e7-940a13aff01c
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: |-
+          - This column is system-generated and records the timestamp of the last update to the record.
+          - It is populated using the `CURRENT_TIMESTAMP` function whenever the record is modified.
+          - This timestamp is essential for tracking data changes and ensuring data integrity through audit trails.
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: STG_SUPPLIER
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'STG_SUPPLIER') }} "STG_SUPPLIER"
+        name: DIM_SUPPLIER
+        noLinkRefs: []
+  name: DIM_SUPPLIER
+  overrideSQL: false
+  schema: ""
+  sqlType: Dimension
+  type: sql
+  version: 1
+type: Node
