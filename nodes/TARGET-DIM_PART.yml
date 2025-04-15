@@ -1,5 +1,5 @@
 fileVersion: 1
-id: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+id: 14e72c94-433d-45a4-83a9-e836d910b04f
 name: DIM_PART
 operation:
   config:
@@ -20,16 +20,12 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: d4df3191-09a7-4d8b-ad88-f2a9b49cddbb
-          stepCounter: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+          columnCounter: a5aa6463-02f6-4d8f-8b86-1d74bc27b2d4
+          stepCounter: 14e72c94-433d-45a4-83a9-e836d910b04f
         config: {}
         dataType: NUMBER
         defaultValue: ""
-        description: |-
-          - This column is a system-generated surrogate key for the dimension table. 
-          - As a primary key, it uniquely identifies each record in the dimension.
-          - It is used for joining with fact tables to facilitate efficient data retrieval and analysis, for example in reports.
-          - This column is not derived from any source column.
+        description: ""
         isSurrogateKey: true
         name: DIM_PART_KEY
         nullable: true
@@ -38,181 +34,142 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: f3ad3a5d-f174-4c10-96e2-9cdfea5033fe
-          stepCounter: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+          columnCounter: 9e8a7dd0-3379-453f-9bb1-498cde8ce944
+          stepCounter: 14e72c94-433d-45a4-83a9-e836d910b04f
         config: {}
         dataType: NUMBER(38,0)
-        description: |-
-          - This column represents the part key from the source data, serving as a business key in the dimension.
-          - It originates from the `P_PARTKEY` column in the `STG_PART` table.
-          - This key is crucial for identifying specific parts and linking part information across different systems and reports.
+        description: ""
         isBusinessKey: true
         name: P_PARTKEY
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 20cb3965-ae27-4df4-9adb-1aed25039e27
-                stepCounter: 3d458c25-41fb-440a-bcf5-e6e3958b8b42
+              - columnCounter: a55e50e0-4dbc-4c5d-9103-5f008d9631a1
+                stepCounter: caa183d4-4779-4a15-8ce7-2558ab2a790d
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 5348a8a2-ea09-438b-9fc2-5858daac1924
-          stepCounter: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+          columnCounter: 29aac5b3-ebf3-47c3-8bc6-48b5a6b0dd90
+          stepCounter: 14e72c94-433d-45a4-83a9-e836d910b04f
         config: {}
         dataType: VARCHAR(55)
-        description: |-
-          - This column represents the name of the part.
-          - It is sourced from the `P_NAME` column of the `STG_PART` table.
-          - It is used in reports and analyses to identify parts by name.
-          - The `P_NAME` provides a descriptive identifier for each part, which is essential for business users.
+        description: ""
         name: P_NAME
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 8cdc785a-642d-4b18-b6d4-5a2fc746e5d2
-                stepCounter: 3d458c25-41fb-440a-bcf5-e6e3958b8b42
+              - columnCounter: 090e761b-18a9-4c77-b0ea-8526d8202d7f
+                stepCounter: caa183d4-4779-4a15-8ce7-2558ab2a790d
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 21cd7a20-4a72-4804-b3b8-8dcb2888d6a1
-          stepCounter: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+          columnCounter: e0c6f4f8-f844-4074-9e49-f28b9a301e69
+          stepCounter: 14e72c94-433d-45a4-83a9-e836d910b04f
         config: {}
         dataType: VARCHAR(25)
-        description: |-
-          - This column represents the manufacturer of the part.
-          - It is sourced from the `P_MFGR` column of the `STG_PART` table.
-          - It enables analyses and reports based on the part's manufacturer.
-          - The `P_MFGR` is a key attribute for understanding the supply chain and sourcing of parts.
+        description: ""
         name: P_MFGR
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 71e33ac6-aa8a-4a1e-ad3d-af50b6168491
-                stepCounter: 3d458c25-41fb-440a-bcf5-e6e3958b8b42
+              - columnCounter: fc279a7e-78eb-454d-ae6a-2293d86b8ec1
+                stepCounter: caa183d4-4779-4a15-8ce7-2558ab2a790d
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: d7c824d6-c8ab-48ce-aa8c-575048a4a8fb
-          stepCounter: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+          columnCounter: 9686e230-492f-4876-bd28-44fb92eb951a
+          stepCounter: 14e72c94-433d-45a4-83a9-e836d910b04f
         config: {}
         dataType: VARCHAR(10)
-        description: |-
-          - This column represents the brand of the part.
-          - It is sourced from the `P_BRAND` column of the `STG_PART` table.
-          - It allows filtering and grouping of parts based on their brand, which is useful for sales and marketing analysis.
-          - The `P_BRAND` attribute is essential for understanding market segmentation.
+        description: ""
         name: P_BRAND
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 74d7719b-8be8-4167-802d-417850d34259
-                stepCounter: 3d458c25-41fb-440a-bcf5-e6e3958b8b42
+              - columnCounter: b967e00d-c00b-4ae2-9764-88d5038b0687
+                stepCounter: caa183d4-4779-4a15-8ce7-2558ab2a790d
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: fe900127-3a69-41b6-bd56-3039f26fb326
-          stepCounter: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+          columnCounter: 6f18d6f7-f2d3-4c12-a51c-8be2d8083a73
+          stepCounter: 14e72c94-433d-45a4-83a9-e836d910b04f
         config: {}
         dataType: VARCHAR(25)
-        description: |-
-          - This column represents the type of the part.
-          - It is sourced from the `P_TYPE` column of the `STG_PART` table.
-          - The `P_TYPE` is used for categorizing parts, which is useful for inventory management and product portfolio analysis.
-          - It is a key attribute for classifying parts based on their functional characteristics.
+        description: ""
         name: P_TYPE
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: ed4ca9fe-3771-4a9e-936e-be26e47f46a3
-                stepCounter: 3d458c25-41fb-440a-bcf5-e6e3958b8b42
+              - columnCounter: c086f815-ee80-4e32-a3ae-5f8cdbc51c69
+                stepCounter: caa183d4-4779-4a15-8ce7-2558ab2a790d
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: a60a64ad-75d9-4730-ae6a-b47ca4ec8f54
-          stepCounter: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+          columnCounter: 52dd58e0-c73c-40f9-87d9-2b649a70f5bb
+          stepCounter: 14e72c94-433d-45a4-83a9-e836d910b04f
         config: {}
         dataType: NUMBER(38,0)
-        description: |-
-          - This column represents the size of the part.
-          - It is sourced from the `P_SIZE` column of the `STG_PART` table.
-          - It is used for filtering and grouping parts by size.
-          - The `P_SIZE` is a critical attribute for determining the physical dimensions of parts.
+        description: ""
         name: P_SIZE
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 79b29770-b869-444c-b308-f13802d0a6dd
-                stepCounter: 3d458c25-41fb-440a-bcf5-e6e3958b8b42
+              - columnCounter: 94c4881d-daab-4949-ae96-71f433144478
+                stepCounter: caa183d4-4779-4a15-8ce7-2558ab2a790d
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 3ba7973e-7bb3-48e1-bd53-7a91bbb67cea
-          stepCounter: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+          columnCounter: 0b4a90c9-04b1-4cdf-81de-4ae6573196a3
+          stepCounter: 14e72c94-433d-45a4-83a9-e836d910b04f
         config: {}
         dataType: VARCHAR(10)
-        description: |-
-          - This column represents the container type used for the part.
-          - It is sourced from the `P_CONTAINER` column of the `STG_PART` table.
-          - This column is used for logistical and warehousing purposes.
-          - The `P_CONTAINER` specifies how parts are stored and transported.
+        description: ""
         name: P_CONTAINER
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: 00854561-f5eb-423c-bf40-f004b8a8a575
-                stepCounter: 3d458c25-41fb-440a-bcf5-e6e3958b8b42
+              - columnCounter: b7d5c026-0a63-4f63-8605-3fdf5f7069a0
+                stepCounter: caa183d4-4779-4a15-8ce7-2558ab2a790d
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: dd3f2f58-276e-4ff2-b193-2230ca4fc140
-          stepCounter: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+          columnCounter: 3a291f11-2320-4d42-9810-3435d226a0ff
+          stepCounter: 14e72c94-433d-45a4-83a9-e836d910b04f
         config: {}
         dataType: NUMBER(12,2)
-        description: |-
-          - This column represents the retail price of the part.
-          - It is sourced from the `P_RETAILPRICE` column of the `STG_PART` table.
-          - It is a key metric for profitability analysis and pricing strategies.
-          - The `P_RETAILPRICE` allows business users to assess the value and revenue potential of different parts.
+        description: ""
         name: P_RETAILPRICE
         nullable: false
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: c1b9eb6a-fdfb-4412-9205-25ad34611b9b
-                stepCounter: 3d458c25-41fb-440a-bcf5-e6e3958b8b42
+              - columnCounter: 525e671a-d396-421e-934f-95957bd5f20f
+                stepCounter: caa183d4-4779-4a15-8ce7-2558ab2a790d
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: bfe6b7d1-3611-46ab-bfa8-ebb45c0223cd
-          stepCounter: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+          columnCounter: f9e7568b-68ba-4cc0-9039-d96be7e416f9
+          stepCounter: 14e72c94-433d-45a4-83a9-e836d910b04f
         config: {}
         dataType: VARCHAR(23)
-        description: |-
-          - This column contains descriptive comments about the part.
-          - It is sourced from the `P_COMMENT` column of the `STG_PART` table.
-          - This is used for storing additional information or notes regarding the part.
-          - The `P_COMMENT` column provides a way to capture qualitative data related to parts.
+        description: ""
         name: P_COMMENT
         nullable: true
         sourceColumnReferences:
           - columnReferences:
-              - columnCounter: a6e4fa35-1a99-486f-9a0c-1e0ae86a05fd
-                stepCounter: 3d458c25-41fb-440a-bcf5-e6e3958b8b42
+              - columnCounter: 9d56a915-4d40-492c-9008-af1fa1bfbc7a
+                stepCounter: caa183d4-4779-4a15-8ce7-2558ab2a790d
             transform: ""
       - acceptedValues:
           strictMatch: true
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: aaae5f5f-4f26-418c-b3f9-d081ea4e2e06
-          stepCounter: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+          columnCounter: 75ae92bf-432a-4e8d-bb88-21151fc7d3b2
+          stepCounter: 14e72c94-433d-45a4-83a9-e836d910b04f
         config: {}
         dataType: NUMBER
         defaultValue: ""
-        description: |-
-          - This column is a system-generated version number for each record in the dimension table.
-          - It tracks changes to the records over time, supporting historical analysis and auditing.
-          - The column is automatically populated and incremented with each update to a record.
-          - This column is not derived from any source column.
+        description: ""
         isSystemVersion: true
         name: SYSTEM_VERSION
         nullable: true
@@ -224,16 +181,12 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 2cc1f1af-9caf-43d1-ba38-e2bee3a93a56
-          stepCounter: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+          columnCounter: 01049f0b-ee33-4adb-bace-fc4b8ec26e9c
+          stepCounter: 14e72c94-433d-45a4-83a9-e836d910b04f
         config: {}
         dataType: VARCHAR
         defaultValue: ""
-        description: |-
-          - This column is a system-generated flag indicating whether a record is the most current version.
-          - It is used to easily identify the active record for a given business key.
-          - The column is automatically managed by the system and updated during data changes.
-          - This column is not derived from any source column.
+        description: ""
         isSystemCurrentFlag: true
         name: SYSTEM_CURRENT_FLAG
         nullable: true
@@ -245,16 +198,12 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: a826d512-a8bd-4ccb-9e3b-d6b2e7616101
-          stepCounter: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+          columnCounter: 527b9145-9078-4b5d-9c58-904802f77ccb
+          stepCounter: 14e72c94-433d-45a4-83a9-e836d910b04f
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
-        description: |-
-          - This column is a system-generated timestamp that indicates when a record becomes effective.
-          - It is used for tracking the period during which a record is valid.
-          - The value is derived using `CAST(CURRENT_TIMESTAMP AS TIMESTAMP)`.
-          - This column is not derived from any source column.
+        description: ""
         isSystemStartDate: true
         name: SYSTEM_START_DATE
         nullable: true
@@ -266,16 +215,12 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 18ccc070-77f9-4a89-b4ed-cc1427677ac1
-          stepCounter: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+          columnCounter: fbcbc7e9-0fcb-4af0-bb03-8e6fd58a44ca
+          stepCounter: 14e72c94-433d-45a4-83a9-e836d910b04f
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
-        description: |-
-          - This column is a system-generated timestamp that indicates when a record is no longer effective.
-          - It is used for tracking the period during which a record is valid.
-          - The default value is `2999-12-31 00:00:00` which indicates that record is valid indefinitely.
-          - The value is derived using `CAST('2999-12-31 00:00:00' AS TIMESTAMP)` and is not derived from any source column.
+        description: ""
         isSystemEndDate: true
         name: SYSTEM_END_DATE
         nullable: true
@@ -287,16 +232,12 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: f32ddbbf-65a9-4ecc-b217-760f4e1b0efe
-          stepCounter: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+          columnCounter: 39923779-be71-492c-afd0-de58c1347727
+          stepCounter: 14e72c94-433d-45a4-83a9-e836d910b04f
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
-        description: |-
-          - This column is a system-generated timestamp indicating when the record was created.
-          - It is used for auditing and tracking the creation date of each record.
-          - The value is derived using `CAST(CURRENT_TIMESTAMP AS TIMESTAMP)`.
-          - This column is not derived from any source column.
+        description: ""
         isSystemCreateDate: true
         name: SYSTEM_CREATE_DATE
         nullable: true
@@ -308,16 +249,12 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: e2f084cd-4c34-46ef-b326-791aed9c973f
-          stepCounter: 3dbb50e9-4f82-443e-93c1-0a3e3f20185d
+          columnCounter: db377518-2633-4d2f-ba4d-83dcb6ac3839
+          stepCounter: 14e72c94-433d-45a4-83a9-e836d910b04f
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
-        description: |-
-          - This column is a system-generated timestamp indicating when the record was last updated.
-          - It is used for auditing and tracking the modification history of each record.
-          - The value is derived using `CAST(CURRENT_TIMESTAMP AS TIMESTAMP)`.
-          - This column is not derived from any source column.
+        description: ""
         isSystemUpdateDate: true
         name: SYSTEM_UPDATE_DATE
         nullable: true
